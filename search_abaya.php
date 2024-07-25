@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopFlow</title>
+    <!-- connect css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@300;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+     <!-- navbar -->
+     <div class="main-navbar shadow-sm sticky-top">
+      <div class="top-navbar">
+        <div class="container-fluid">
+          <div class="row">
+            <div
+              class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block"
+            >
+              <h5 class="brand-name">Ecombuzz</h5>
+            </div>
+            <div class="col-md-5 my-auto">
+              <!-- <form role="search">
+                <div class="input-group">
+                  <input
+                    type="search"
+                    placeholder="Search your product"
+                    class="form-control"
+                  />
+                  <button class="btn bg-white" type="submit">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </form> -->
+              <form role="search" action="search_abaya.php" method="get" >
+                <div class="input-group">
+                  <input
+                    type="search"
+                    placeholder="Search your product"
+                    class="form-control"
+                    class="btn btn-outline-dark"
+                    name="search_data"
+                    autocomplete="off"
+                  />
+                 <!--  <button class="btn bg-white" type="submit"> -->
+                    <input
+                      type="submit"
+                      value="Search"
+                      class="btn btn-outline-dark"
+                      name="search_data_product"
+                    />
+                    <!-- <i class="fa fa-search"></i> -->
+                  </button>
+                </div>
+                <!-- <div class="input-group">
+                  <input
+                    type="search"
+                    placeholder="Search your product"
+                    class="form-control"
+                  />
+                  <button class="btn bg-white" type="submit">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div> -->
+              </form>
+              <?php
+search_product();
+
+?>
+            </div>
+            <div class="col-md-5 my-auto">
+              <ul class="nav justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="cart.php">
+                    <i class="fa fa-shopping-cart"></i> My Cart
+                  </a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fa fa-user"></i> Username
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="fa fa-user"></i> Profile</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="payment_details.php"
+                        ><i class="fa fa-list"></i> My Orders</a
+                      >
+                    </li>
+                 
+                    <li>
+                      <a class="dropdown-item" href="cart.php"
+                        ><i class="fa fa-shopping-cart"></i> My Cart</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="login.php.html"
+                        ><i class="fa fa-sign-out"></i> Logout</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand d-block d-sm-block d-md-none d-lg-none"
+            href="#"
+          >
+            Ecombuzz
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#About">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#About">About Us</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="watches.php.html">Apple Watches</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shoes.php.html">Shoes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bags.php.html">Bags</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="abaya.php.html">Abaya</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <!-- main part  -->
+    <div class="abayamain">
+        <div class="abhead">
+          <h1>Elegance Unveiled: Your Perfect Abaya Awaits!</h1>
+          <p>
+            Step into the world of modest fashion with our abayas, striking the
+            perfect balance between cultural modesty and modern trends. With our
+            abayas, embrace confidence effortlessly; each piece is thoughtfully
+            designed to empower women with grace and style.
+          </p>
+        </div>
+        <div class="ab1">
+          <img src="img/ab1.png" alt="Abaya" /><br />
+          <button class="bton">Shop now🛍</button>
+        </div>
+      </div>
+  
+      <!-- here -->
+      <div class="abaya">
+        <div class="ab2">
+          <img src="img/ab2.png" alt="Abaya 1" height="300px" width="200px" />
+          <p>Belt abaya</p>
+          <p>PKR 2,500</p>
+          <form method="post" action="cart.php">
+            <input type="hidden" name="product_id" value="17">
+            <input type="hidden" name="product_name" value="Belt abaya">
+            <input type="hidden" name="product_price" value="2,500">
+            <button type="submit" class="CartBtn" name="add_to_cart">
+            <span class="IconContainer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="rgb(17, 17, 17)"
+                class="cart"
+              >
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                ></path>
+              </svg>
+            </span>
+            <h3 class="text1">Add to Cart</h3>
+          </button>
+          </form>
+        </div>
+  
+        <div class="ab2">
+          <img src="img/ab3.png" alt="Abaya 2" height="300px" width="200px" />
+          <p>Jilbab</p>
+          <p>PKR 3,500</p>
+          <form method="post" action="cart.php">
+            <input type="hidden" name="product_id" value="18">
+            <input type="hidden" name="product_name" value="Jilbab">
+            <input type="hidden" name="product_price" value="3,500">
+            <button type="submit" class="CartBtn" name="add_to_cart">
+            <span class="IconContainer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="rgb(17, 17, 17)"
+                class="cart"
+              >
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                ></path>
+              </svg>
+            </span>
+            <h3 class="text1">Add to Cart</h3>
+          </button>
+          </form>
+        </div>
+        <div class="ab2">
+          <img src="img/ab4.png" alt="Abaya 3" height="300px" width="200px" />
+          <p>Layers</p>
+          <p>PKR 2,500</p>
+          <form method="post" action="cart.php">
+            <input type="hidden" name="product_id" value="19">
+            <input type="hidden" name="product_name" value="Layers">
+            <input type="hidden" name="product_price" value="2,500">
+            <button type="submit" class="CartBtn" name="add_to_cart">
+            <span class="IconContainer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="rgb(17, 17, 17)"
+                class="cart"
+              >
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                ></path>
+              </svg>
+            </span>
+            <h3 class="text1">Add to Cart</h3>
+          </button>
+          </form>
+        </div>
+  
+        <div class="ab2">
+          <img src="img/ab5.png" alt="Abaya 4" height="300px" width="200px" />
+          <p>Simple</p>
+          <p>PKR 3,000</p>
+          <form method="post" action="cart.php">
+            <input type="hidden" name="product_id" value="20">
+            <input type="hidden" name="product_name" value="Simple">
+            <input type="hidden" name="product_price" value="3,000">
+            <button type="submit" class="CartBtn" name="add_to_cart">
+            <span class="IconContainer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="rgb(17, 17, 17)"
+                class="cart"
+              >
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                ></path>
+              </svg>
+            </span>
+            <h3 class="text1">Add to Cart</h3>
+          </button>
+          </form>
+        </div>
+  
+        <div class="ab2">
+          <img src="img/ab6.png" alt="Abaya 5" height="300px" width="200px" />
+          <p>Full abaya</p>
+          <p>PKR 3,500</p>
+          <form method="post" action="cart.php">
+            <input type="hidden" name="product_id" value="21">
+            <input type="hidden" name="product_name" value="Full abaya">
+            <input type="hidden" name="product_price" value="3,500">
+            <button type="submit" class="CartBtn" name="add_to_cart">
+            <span class="IconContainer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="rgb(17, 17, 17)"
+                class="cart"
+              >
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                ></path>
+              </svg>
+            </span>
+            <h3 class="text1">Add to Cart</h3>
+          </button>
+          </form>
+        </div>
+  
+        <div class="ab2">
+          <img src="img/ab7.png" alt="Abaya 6" height="300px" width="200px" />
+          <p>Full style</p>
+          <p>PKR 2,500</p>
+          <form method="post" action="cart.php">
+            <input type="hidden" name="product_id" value="22">
+            <input type="hidden" name="product_name" value="Full style">
+            <input type="hidden" name="product_price" value="2,500">
+            <button type="submit" class="CartBtn" name="add_to_cart">
+            <span class="IconContainer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="rgb(17, 17, 17)"
+                class="cart"
+              >
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                ></path>
+              </svg>
+            </span>
+            <h3 class="text1">Add to Cart</h3>
+          </button>
+          </form>
+        </div>
+  
+        <div class="ab2">
+          <img src="img/ab8.png" alt="Abaya 7" height="300px" width="200px" />
+          <p>Embroided</p>
+          <p>PKR 2,500</p>
+          <form method="post" action="cart.php">
+            <input type="hidden" name="product_id" value="23">
+            <input type="hidden" name="product_name" value="Embroided">
+            <input type="hidden" name="product_price" value="2,500">
+            <button type="submit" class="CartBtn" name="add_to_cart">
+            <span class="IconContainer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="rgb(17, 17, 17)"
+                class="cart"
+              >
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                ></path>
+              </svg>
+            </span>
+            <h3 class="text1">Add to Cart</h3>
+          </button>
+          </form>
+        </div>
+  
+        <div class="ab2">
+          <img src="img/ab9.png" alt="Abaya " height="300px" width="200px" />
+          <p>Maxi style</p>
+          <p>PKR 2,500</p>
+          <form method="post" action="cart.php">
+            <input type="hidden" name="product_id" value="24">
+            <input type="hidden" name="product_name" value="Maxi style">
+            <input type="hidden" name="product_price" value="2,500">
+            <button type="submit" class="CartBtn" name="add_to_cart">
+            <span class="IconContainer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 576 512"
+                fill="rgb(17, 17, 17)"
+                class="cart"
+              >
+                <path
+                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                ></path>
+              </svg>
+            </span>
+            <h3 class="text1">Add to Cart</h3>
+          </button>
+          </form>
+        </div>
+      </div>
+  </body></html>
+
+  <?php
+include('includes/connect.php');
+function search_product(){
+  global $conn;
+  if(isset($_GET['search_product_data'])){
+    $search_data_value=$_GET['search_data'];
+  
+  $search_query="Select * from `product` where product_keywords like '% $search_data_value%'";
+  $result_query=mysqli_query($conn, $search_query);
+  while($row=mysqli_fetch_assoc($result_query)){
+    $product_title=$_POST['product_title'];
+    $product_description=$_POST['product_description'];
+    $product_keywords=$_POST['product_keywords'];
+    $product_category=$_POST['product_category'];
+    $product_status=$_POST['product_status'];
+    $product_price=$_POST['product_price'];
+    echo "<div class='col-md-4 mb-2>
+      <div class='card-body'>
+        <h5 class='card-title'>$product_title</h5>
+        <p class='card-text'> $product_description</p>
+        <a href='#' class='btn btn-info'>Add to cart</a>
+        <a href='#' class='btn btn-secondary'>View more</a>
+      </div>
+     </div>
+    ";
+  }
+}
+}
+
+?>
